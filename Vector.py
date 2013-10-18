@@ -42,9 +42,15 @@ class PositionVector(Vector):
         z = self.z - other.z
         return PositionVector(x,y,z)
     def __mul__(self,other):
-        x = self.x * other.x
-        y = self.y * other.y
-        z = self.z * other.z
-        return x + y + z
+        if isinstance(other, (int, long, float, complex)):
+            x = self.x *other
+            y = self.y *other
+            z = self.z *other
+            return PositionVector(x,y,z)
+        else:
+            x = self.x * other.x
+            y = self.y * other.y
+            z = self.z * other.z
+            return x + y + z
     def __repr__(self):
         return '<%s,%s,%s>' % (self.x,self.y,self.z)
