@@ -1,4 +1,4 @@
-TetrhedronProject
+TetrahedronProject
 ================
 Project I had to to for my multivariable class. Obviously I had to procrastinate so I tried to solve it using Python. Granted the problem was that a lot of it was proving which I can't do with python, never the less here it is.
 
